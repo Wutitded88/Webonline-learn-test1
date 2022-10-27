@@ -1,0 +1,64 @@
+<IfModule mod_rewrite.c>
+Header set Access-Control-Allow-Origin "*"
+
+RewriteEngine on
+
+RewriteRule ^home$ index.php [L,QSA]
+
+RewriteRule ^register$ register.php [L,QSA]
+RewriteRule ^system/register$ api/register.php [L,QSA]
+RewriteRule ^system/register_otp$ api/register_otp.php [L,QSA]
+
+RewriteRule ^forgetpassword$ forgetpassword.php [L,QSA]
+RewriteRule ^system/forgetpassword$ api/forgetpassword.php [L,QSA]
+
+RewriteRule ^login$ login.php [L,QSA]
+RewriteRule ^system/login$ api/login.php [L,QSA]
+RewriteRule ^howtowallet$ howtowallet.php [L,QSA]
+
+RewriteRule ^wallet$ wallet.php [L,QSA]
+RewriteRule ^system/getbalance$ api/getbalance.php [L,QSA]
+RewriteRule ^system/changepassword$ api/changepassword.php [L,QSA]
+
+RewriteRule ^historydeposit$ historydeposit.php [L,QSA]
+
+RewriteRule ^historywithdrawal$ historywithdrawal.php [L,QSA]
+
+RewriteRule ^ranking$ ranking.php [L,QSA]
+
+RewriteRule ^checkin$ checkin.php [L,QSA]
+RewriteRule ^system/checkin$ api/checkin.php [L,QSA]
+
+RewriteRule ^promotion$ promotion.php [L,QSA]
+RewriteRule ^system/promotion$ api/promotion.php [L,QSA]
+
+RewriteRule ^winloss$ winloss.php [L,QSA]
+RewriteRule ^system/winloss$ api/winloss.php [L,QSA]
+
+RewriteRule ^freecredit$ freecredit.php [L,QSA]
+RewriteRule ^system/freecredit$ api/freecredit.php [L,QSA]
+
+RewriteRule ^affiliate$ affiliate.php [L,QSA]
+RewriteRule ^system/affiliate$ api/affiliate.php [L,QSA]
+
+RewriteRule ^fixed-deposit$ fixed_deposit.php [L,QSA]
+RewriteRule ^system/fixed_deposit$ api/fixed_deposit.php [L,QSA]
+
+RewriteRule ^deposit$ deposit.php [L,QSA]
+RewriteRule ^system/topup$ api/topup.php [L,QSA]
+
+RewriteRule ^withdrawal$ withdraw.php [L,QSA]
+RewriteRule ^system/withdraw$ api/withdraw.php [L,QSA]
+RewriteRule ^system/profile$ api/profile.php [L,QSA]
+
+RewriteRule ^gambling$ gambling.php [L,QSA]
+RewriteRule ^gambling/([^/]+)$ gambling-list.php?provi=$1 [L,QSA]
+RewriteRule ^system/gettoken$ api/gettoken.php [L,QSA]
+
+RewriteRule ^system/loginGame$ api/loginGame.php [L,QSA]
+RewriteRule ^system/logout$ api/logout.php [L,QSA]
+
+RewriteRule ^system/withdrawalag$ api/withdrawalag.php [L,QSA]
+
+
+</IfModule>
